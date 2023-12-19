@@ -23,6 +23,10 @@ To easily browse the IRIS Archive with a graphic interface, Azure Storage Explor
 - Locate the bin folder within where you installed Azure Storage Explorer at `Microsoft Azure Storage Explorer\resources\app\node_modules\@azure-tools\azcopy-win64\dist\bin`.
 - Swap the existing azCopy file with the new one, changing the new file's name to match the existing one.
 
+### Cached files
+
+For each dataset Azure Storage Explorer caches 5000 files, and only shows these by default. To load additional files the `Load more` button must be pressed.
+
 ## Azure SDKs
 
 The IRIS Archive can also be interacted with programmatically via Azure SDK's, see more information [here](https://azure.microsoft.com/en-gb/downloads/).
