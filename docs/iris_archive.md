@@ -24,8 +24,8 @@ Currently it is not possible to download files from the IRIS Archive using Azure
 To fix this:
 1. Download azCopy `V10.22.0` [here](https://aka.ms/downloadazcopy-v10-windows).
 2. Unzip the download to extract `azcopy.exe`.
-2. Locate the bin folder within where you installed Azure Storage Explorer at `Microsoft Azure Storage Explorer\resources\app\node_modules\@azure-tools\azcopy-win64\dist\bin`.
-3. Swap the existing azCopy file with the new one, changing the new file's name to match the existing one.
+3. Locate the bin folder within where you installed Azure Storage Explorer at `Microsoft Azure Storage Explorer\resources\app\node_modules\@azure-tools\azcopy-win64\dist\bin`.
+4. Swap the existing azCopy file with the new one, changing the new file's name to match the existing one.
 
 ### Cached files
 
