@@ -13,7 +13,7 @@ Inside this we see a folder for each dataset, for example `ABUC`.
 
 ## Azure Storage Explorer
 
-To easily browse the IRIS Archive with a graphical, Azure Storage Explorer can be used.
+To easily browse the IRIS Archive with a graphical interface, Azure Storage Explorer can be used.
 
 ### Setup
 
