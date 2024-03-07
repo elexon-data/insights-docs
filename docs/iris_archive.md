@@ -28,6 +28,10 @@ To easily browse the IRIS Archive with a graphical interface, Azure Storage Expl
 
 For each dataset Azure Storage Explorer caches 5000 files, and only shows these by default. To load additional files the `Load more` button must be pressed.
 
+### Troubleshooting
+
+If you are having difficulties downloading files please ensure you have Azure Storage Explorer [v1.33](https://github.com/microsoft/AzureStorageExplorer/releases/tag/v1.33.0) as previous versions will block downloads by default.
+
 ## Azure SDKs
 
 The IRIS Archive can also be interacted with programmatically via Azure SDKs. 
