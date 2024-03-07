@@ -24,16 +24,6 @@ To easily browse the IRIS Archive with a graphical interface, Azure Storage Expl
 5. Enter the following blob container URL: `https://archive.data.elexon.co.uk/iris-archive`.
 6. Confirm connecting to resource.
 
-### Downloading files via Azure Storage Explorer
-
-Currently it is not possible to download files from the IRIS Archive using Azure Storage Explorer, except by using a workaround, since AzCopy `V10.22.0` is needed and by default ASE uses `V10.20.0`.
-
-To fix this:
-1. Download AzCopy `V10.22.0` [here](https://aka.ms/downloadazcopy-v10-windows).
-2. Unzip the download to extract `azcopy.exe`.
-3. Locate the bin folder within where you installed Azure Storage Explorer at `Microsoft Azure Storage Explorer\resources\app\node_modules\@azure-tools\azcopy-win64\dist\bin`.
-4. Swap the existing AzCopy file with the new one, changing the new file's name to match the existing one.
-
 ### Cached files
 
 For each dataset Azure Storage Explorer caches 5000 files, and only shows these by default. To load additional files the `Load more` button must be pressed.
