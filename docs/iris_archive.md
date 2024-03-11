@@ -30,7 +30,7 @@ For each dataset Azure Storage Explorer caches 5000 files, and only shows these 
 
 ### Troubleshooting
 
-If you are having difficulties downloading files please ensure you have Azure Storage Explorer [v1.33](https://github.com/microsoft/AzureStorageExplorer/releases/tag/v1.33.0) as previous versions will block downloads by default.
+If you are having difficulties downloading files please ensure you have Azure Storage Explorer [v1.33](https://github.com/microsoft/AzureStorageExplorer/releases/tag/v1.33.0) or later as previous versions will block downloads by default.
 
 ## Azure SDKs
 
