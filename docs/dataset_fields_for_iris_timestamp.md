@@ -2,6 +2,8 @@
 
 This document maps timestamp field names to their corresponding datasets.
 
+All datasets are case sensitive.
+
 ## acceptanceTime
 - **BOALF** -- Bid Offer Acceptance Level Flagged
 
