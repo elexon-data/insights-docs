@@ -40,7 +40,7 @@ More information about dataset acronyms and reference timestamp fields can be fo
 
 ## Azure Storage Explorer Tag Filtering
 
-In Azure Storage Explorer, you can click on the filter button (marked with red in the picture below), select the Tag Query and use the tags to retrieve desired blobs
+In Azure Storage Explorer, you can click on the filter button (marked with red in the example image), select 'Tag Query' and use the tags to retrieve desired blobs
 
 ![Tag filtering example](attachments/iris_archive-tag_filtering.png)
 
