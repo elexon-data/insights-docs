@@ -1,6 +1,10 @@
-# Dataset Fields for IRIS Timestamp
+# Dataset and Timestamp Reference
 
-This document maps timestamp field names to their corresponding datasets.
+Below is a list of all the datasets in the IRIS Archive.
+
+When using the 'Dataset' tag filter, set the value of 'Dataset' to the desired acronym from the list below.
+
+The Datasets are grouped by the reference of their 'Timestamp' tag (e.g BOALF's Timestamp tag references acceptanceTime, whilst BOAV's Timestamp references createdDateTime). Note that the tag is always called 'Timestamp', regardless of the time it references.
 
 All datasets are case sensitive.
 
@@ -50,7 +54,7 @@ All datasets are case sensitive.
 - **ITSDO** -- Initial Transmission System Demand Outturn
 - **LOLPDM** -- Loss of Load Probability (LoLP) and De-rated Margin
 - **MATL** -- Month-Ahead Total Load Forecast Per Bidding Zone
-- **MELNGC** -- 	Day and Day-Ahead Margin
+- **MELNGC** -- Day and Day-Ahead Margin
 - **NDF** -- National Day and Day-Ahead National Demand Forecast
 - **NDFD** -- Demand & Surplus Forecast Data (2-14 days ahead) National Demand
 - **NDFW** -- Demand & Surplus Forecast Data (2-52 weeks ahead) National Demand

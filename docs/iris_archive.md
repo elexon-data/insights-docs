@@ -39,7 +39,7 @@ IRIS Archive blobs have 3 tags to filter by:
  - Timestamp - Reference time for the blob's data content
  - UploadTime - The time when the blob was uploaded to IRIS
 
-More information about dataset acronyms and reference timestamp fields can be found [here](dataset_fields_for_iris_timestamp.md).
+More information about dataset acronyms and reference timestamp fields can be found [here](dataset_and_timestamp_reference.md).
 
 The format for datetime tags is `YYYY-MM-DDTHH:mm:ssZ`.
 
