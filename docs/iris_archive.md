@@ -32,6 +32,54 @@ For each dataset Azure Storage Explorer caches 5000 files, and only shows these 
 
 If you are having difficulties downloading files please ensure you have Azure Storage Explorer [v1.33](https://github.com/microsoft/AzureStorageExplorer/releases/tag/v1.33.0) or later as previous versions will block downloads by default.
 
+## Tag filtering
+
+IRIS Archive blobs have 3 tags to filter by:
+ - Dataset - The acronym for the dataset name (e.g. AGPT)
+ - Timestamp - Reference time for the blob's data content
+ - UploadTime - The time when the blob was uploaded to IRIS
+
+More information about dataset acronyms and reference timestamp fields can be found [here](dataset_and_timestamp_reference.md).
+
+The format for datetime tags is `YYYY-MM-DDTHH:mm:ssZ`.
+
+All tags are case sensitive.
+
+### Azure Storage Explorer Tag Filtering
+
+In Azure Storage Explorer, you can click on the filter button (marked with red in the example image), select 'Tag Query' and use the tags to retrieve desired blobs
+
+![Tag filtering example](attachments/iris_archive-tag_filtering.png)
+
+### Azure API Tag Filtering
+
+You can use the Azure Storage Blob API to request blobs using tag filters.
+
+`https://archive.data.elexon.co.uk/iris-archive?comp=blobs&restype=container&where=<expression>`
+
+### Expression Syntax
+
+| Operator | Description | Example |
+|----------|-------------|---------|
+| = | Equal | `where="Dataset" = 'AGPT'` |
+| > | Greater than | `where="Timestamp" > '2023-06-18T10:51:26Z'` |
+| >= | Greater than or equal | `where="UploadTime" >= '2023-06-18T00:00:00Z'` |
+| < | Less than | `where="Timestamp" < '2023-06-20T00:00:00Z'` |
+| <= | Less than or equal | `where="UploadTime" <= '2023-06-19T23:59:59Z'` |
+| AND | Logical and | `where="Dataset" = 'AGPT' AND "Timestamp" > '2023-06-18T00:00:00Z' AND "Timestamp" < '2023-06-20T00:00:00Z'` |
+
+Expressions should be URI encoded. See [Microsoft documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-manage-find-blobs?tabs=azure-portal#finding-data-using-blob-index-tags) for more information.
+
+### Example
+
+To search for blobs uploaded to IRIS on 14th April 2025 for the BOAV dataset:
+
+Expression: `"Dataset" = 'BOAV' AND "UploadTime" > '2025-04-14' AND "UploadTime" < '2025-04-15'`.
+
+URL encoded: `%22Dataset%22%20%3D%20%27BOAV%27%20AND%20%22UploadTime%22%20%3E%20%272025-04-14%27%20AND%20%22UploadTime%22%20%3C%20%272025-04-15%27`
+
+Full request: `https://archive.data.elexon.co.uk/iris-archive?comp=blobs&restype=container&where=%22Dataset%22%20%3D%20%27BOAV%27%20AND%20%22UploadTime%22%20%3E%20%272025-04-14%27%20AND%20%22UploadTime%22%20%3C%20%272025-04-15%27`
+
 ## Azure SDKs
 
 The IRIS Archive can also be interacted with programmatically via Azure SDKs. 
